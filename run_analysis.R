@@ -66,7 +66,6 @@ for (i in 1:30) {
 activity_id<-rep(1:6,time=30)
 subject<-rep(1:30,each=6)
 activity_labels<-as.character(act_la[,2])
-res<-data.frame(cbind(subject,activity_id,activity_labels,m),row.names=1:180)
-
-write.table(res, file = "c:/data/result.txt",row.name=FALSE ) 
+res<-cbind(subject,activity_id,activity_labels,m)
+write.table(res, file = "c:/data/result.txt",row.name=FALSE,quote=F) 
 
